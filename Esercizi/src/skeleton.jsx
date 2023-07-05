@@ -1,3 +1,7 @@
 import React from "react";
 
-export class A extends React.Component {}
+export class A extends React.Component {
+  render() {
+    return;
+  }
+}
