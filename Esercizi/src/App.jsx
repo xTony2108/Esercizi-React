@@ -13,6 +13,7 @@ import { Welcome10 } from "./Esercizio11/Esercizio11";
 import { Counter } from "./Esercizio12/Counter";
 import { Counter2 } from "./Esercizio13/Counter2";
 import { Counter3 } from "./Esercizio14/Counter3";
+import { Counter4 } from "./Esercizio15/Counter4";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Counter />
       <Counter2 initialValue={0} incrementInterval={1000} incrementAmount={1} />
       <Counter3 initialValue={0} incrementInterval={1000} incrementAmount={1} />
+      <Counter4 initialValue={0} incrementInterval={1000} incrementAmount={1} />
     </>
   );
 }
