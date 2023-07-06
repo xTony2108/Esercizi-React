@@ -11,6 +11,7 @@ import { Welcome8 } from "./Esercizio9/Esercizio9";
 import { Welcome9 } from "./Esercizio10/Esercizio10";
 import { Welcome10 } from "./Esercizio11/Esercizio11";
 import { Counter } from "./Esercizio12/Counter";
+import { Counter2 } from "./Esercizio13/Counter";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Welcome9 name="John" age={23} />
       <Welcome10 name="John" age={17} />
       <Counter />
+      <Counter2 initialValue={0} incrementInterval={1000} incrementAmount={1} />
     </>
   );
 }
