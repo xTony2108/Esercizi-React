@@ -1,6 +1,6 @@
 import React from "react";
 
-export class TodoList extends React.Component {
+export class TodoList2 extends React.Component {
   state = {
     todo: "",
     items: [],
@@ -13,7 +13,10 @@ export class TodoList extends React.Component {
 
   handleAddButton = () => {
     this.setState((state) => {
-      return (this.state.items = [...state.items, state.todo]);
+      return (
+        (this.state.items = [...state.items, state.todo]),
+        (this.state.todo = "")
+      );
     });
   };
 
