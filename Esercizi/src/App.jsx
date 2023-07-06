@@ -20,6 +20,7 @@ import { InteractiveWelcome } from "./Esercizio18/InteractiveWelcome";
 import { Login } from "./Esercizio19/Login";
 import { Login2 } from "./Esercizio20/Login2";
 import { UncontrolledLogin } from "./Esercizio21/Login3";
+import { UncontrolledLogin2 } from "./Esercizio22/UncontrolledLogin";
 
 class App extends React.Component {
   onLogin = (event, state) => {
@@ -80,6 +81,7 @@ class App extends React.Component {
         <Login onLogin={this.onLogin} />
         <Login2 onLogin={this.onLogin} />
         <UncontrolledLogin onLogin={this.onLoginUncontrolled} />
+        <UncontrolledLogin2 onLogin={this.onLoginUncontrolled} />
       </>
     );
   }
