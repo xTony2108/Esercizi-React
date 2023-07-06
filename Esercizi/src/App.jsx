@@ -14,6 +14,7 @@ import { Counter } from "./Esercizio12/Counter";
 import { Counter2 } from "./Esercizio13/Counter2";
 import { Counter3 } from "./Esercizio14/Counter3";
 import { Counter4 } from "./Esercizio15/Counter4";
+import { ClickCounter } from "./Esercizio16/ClickCounter";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
       <Counter2 initialValue={0} incrementInterval={1000} incrementAmount={1} />
       <Counter3 initialValue={0} incrementInterval={1000} incrementAmount={1} />
       <Counter4 initialValue={0} incrementInterval={1000} incrementAmount={1} />
+      <ClickCounter />
     </>
   );
 }
