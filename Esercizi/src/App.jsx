@@ -17,30 +17,56 @@ import { Counter4 } from "./Esercizio15/Counter4";
 import { ClickCounter } from "./Esercizio16/ClickCounter";
 import { ClickTracker } from "./Esercizio17/ClickTracker";
 import { InteractiveWelcome } from "./Esercizio18/InteractiveWelcome";
+import { Login } from "./Esercizio19/Login";
 
-function App() {
-  return (
-    <>
-      <Message />
-      <Welcome name="Tony" />
-      <Welcome2 />
-      <Welcome3 name="Tony" age={23} />
-      <Welcome4 name={<strong>Tony</strong>} />
-      <Welcome5 name="Tony" age={23} />
-      <Welcome6 name="Tony" age={23} />
-      <Welcome7 name="Tony" age={23} />
-      <Welcome8 name="Tony" age={23} />
-      <Welcome9 name="John" age={23} />
-      <Welcome10 name="John" age={17} />
-      <Counter />
-      <Counter2 initialValue={0} incrementInterval={1000} incrementAmount={1} />
-      <Counter3 initialValue={0} incrementInterval={1000} incrementAmount={1} />
-      <Counter4 initialValue={0} incrementInterval={1000} incrementAmount={1} />
-      <ClickCounter />
-      <ClickTracker />
-      <InteractiveWelcome />
-    </>
-  );
+class App extends React.Component {
+  onLogin = (event, state) => {
+    event.preventDefault();
+    const username = event.target?.elements.username.value;
+    const password = event.target?.elements.password.value;
+    state = {
+      username: username,
+      password: password,
+    };
+    this.setState({ username: username, password: password });
+  };
+  render() {
+    return (
+      <>
+        <Message />
+        <Welcome name="Tony" />
+        <Welcome2 />
+        <Welcome3 name="Tony" age={23} />
+        <Welcome4 name={<strong>Tony</strong>} />
+        <Welcome5 name="Tony" age={23} />
+        <Welcome6 name="Tony" age={23} />
+        <Welcome7 name="Tony" age={23} />
+        <Welcome8 name="Tony" age={23} />
+        <Welcome9 name="John" age={23} />
+        <Welcome10 name="John" age={17} />
+        <Counter />
+        <Counter2
+          initialValue={0}
+          incrementInterval={1000}
+          incrementAmount={1}
+        />
+        <Counter3
+          initialValue={0}
+          incrementInterval={1000}
+          incrementAmount={1}
+        />
+        <Counter4
+          initialValue={0}
+          incrementInterval={1000}
+          incrementAmount={1}
+        />
+        <ClickCounter />
+        <ClickTracker />
+        <InteractiveWelcome />
+        <Login onLogin={this.onLogin} />
+      </>
+    );
+  }
 }
 
 export default App;
