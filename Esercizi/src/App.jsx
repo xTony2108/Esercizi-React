@@ -8,7 +8,7 @@ import { Welcome5 } from "./Esercizio6/Esercizio6";
 import { Welcome6 } from "./Esercizio7/Esercizio7";
 import { Welcome7 } from "./Esercizio8/Esercizio8";
 import { Welcome8 } from "./Esercizio9/Esercizio9";
-import { Welcome9 } from "../Esercizio10/Esercizio10";
+import { Welcome9 } from "./Esercizio10/Esercizio10";
 
 function App() {
   return (
