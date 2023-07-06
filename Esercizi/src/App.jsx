@@ -19,6 +19,7 @@ import { ClickTracker } from "./Esercizio17/ClickTracker";
 import { InteractiveWelcome } from "./Esercizio18/InteractiveWelcome";
 import { Login } from "./Esercizio19/Login";
 import { Login2 } from "./Esercizio20/Login2";
+import { Login3 } from "./Esercizio21/Login3";
 
 class App extends React.Component {
   onLogin = (event, state) => {
@@ -31,6 +32,18 @@ class App extends React.Component {
     };
     this.setState({ username: username, password: password });
   };
+
+  onLoginUncontrolled = (event, state) => {
+    event.preventDefault();
+    const username = event.target?.elements.username.value;
+    const password = event.target?.elements.password.value;
+    state = {
+      username: username,
+      password: password,
+    };
+    this.setState({ username: username, password: password });
+  };
+
   render() {
     return (
       <>
@@ -66,6 +79,7 @@ class App extends React.Component {
         <InteractiveWelcome />
         <Login onLogin={this.onLogin} />
         <Login2 onLogin={this.onLogin} />
+        <Login3 onLogin={this.onLoginUncontrolled} />
       </>
     );
   }
