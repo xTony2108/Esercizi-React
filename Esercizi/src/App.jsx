@@ -6,6 +6,7 @@ import { Welcome3 } from "./Esercizio4";
 import { Welcome4 } from "./Esercizio5";
 import { Welcome5 } from "./Esercizio6/Esercizio6";
 import { Welcome6 } from "./Esercizio7/Esercizio7";
+import { Welcome7 } from "./Esercizio8/Esercizio8";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Welcome4 name={<strong>Tony</strong>} />
       <Welcome5 name="Tony" age={23} />
       <Welcome6 name="Tony" age={23} />
+      <Welcome7 name="Tony" age={23} />
     </>
   );
 }
