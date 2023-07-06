@@ -18,6 +18,7 @@ import { ClickCounter } from "./Esercizio16/ClickCounter";
 import { ClickTracker } from "./Esercizio17/ClickTracker";
 import { InteractiveWelcome } from "./Esercizio18/InteractiveWelcome";
 import { Login } from "./Esercizio19/Login";
+import { Login2 } from "./Esercizio20/Login2";
 
 class App extends React.Component {
   onLogin = (event, state) => {
@@ -64,6 +65,7 @@ class App extends React.Component {
         <ClickTracker />
         <InteractiveWelcome />
         <Login onLogin={this.onLogin} />
+        <Login2 onLogin={this.onLogin} />
       </>
     );
   }
