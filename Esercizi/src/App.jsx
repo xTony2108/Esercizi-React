@@ -12,7 +12,7 @@ import { Welcome9 } from "./Esercizio10/Esercizio10";
 import { Welcome10 } from "./Esercizio11/Esercizio11";
 import { Counter } from "./Esercizio12/Counter";
 import { Counter2 } from "./Esercizio13/Counter2";
-import { Counter3 } from "../Esercizio13/Counter3";
+import { Counter3 } from "./Esercizio14/Counter3";
 
 function App() {
   return (
