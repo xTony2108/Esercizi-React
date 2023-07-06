@@ -1,6 +1,6 @@
 import React, { createRef } from "react";
 
-export class Login3 extends React.Component {
+export class UncontrolledLogin extends React.Component {
   usernameRef = createRef();
   passwordRef = createRef();
 
