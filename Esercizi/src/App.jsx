@@ -25,6 +25,7 @@ import { TodoList } from "./Esercizio23/TodoList";
 import { TodoList2 } from "./Esercizio24/TodoList2";
 import { TodoList3 } from "./Esercizio25/TodoList3";
 import { TodoList4 } from "./Esercizio26/TodoList4";
+import { TodoList5 } from "./Esercizio27/TodoList5";
 
 class App extends React.Component {
   onLogin = (event, state) => {
@@ -90,6 +91,20 @@ class App extends React.Component {
         <TodoList2 />
         <TodoList3 />
         <TodoList4 />
+        <TodoList5
+          render={(state, handleRemoveButton) => {
+            return state.items.map((items, i) => {
+              return (
+                <li key={items + i}>
+                  <span>{items}</span>
+                  <button onClick={() => handleRemoveButton(items, i)}>
+                    Remove
+                  </button>
+                </li>
+              );
+            });
+          }}
+        />
       </>
     );
   }

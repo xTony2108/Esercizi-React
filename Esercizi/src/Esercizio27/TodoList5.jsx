@@ -1,6 +1,6 @@
 import React from "react";
 
-export class TodoList4 extends React.Component {
+export class TodoList5 extends React.Component {
   state = {
     todo: "",
     items: [],
@@ -24,28 +24,33 @@ export class TodoList4 extends React.Component {
     this.setState({ items: [], todo: "" });
   };
 
-  handleRemoveButton = (mapItems, mapI) => {
+  handleRemoveButton = (mapItem, mapI) => {
     this.setState((state) => {
       return (state.items = state.items.filter(
-        (item, i) => item + i != mapItems + mapI
+        (item, i) => item + i != mapItem + mapI
       ));
     });
   };
 
+  // <TodoList5
+  //         render={(state, handleRemoveButton) => {
+  //           return state.items.map((items, i) => {
+  //             return (
+  //               <li key={items + i}>
+  //                 <span>{items}</span>
+  //                 <button onClick={() => handleRemoveButton(items, i)}>
+  //                   Remove
+  //                 </button>
+  //               </li>
+  //             );
+  //           });
+  //         }}
+  //       />
+
   render() {
-    const value = this.state.items.map((items, i) => {
-      return (
-        <li key={items + i}>
-          <span>{items}</span>
-          <button onClick={() => this.handleRemoveButton(items, i)}>
-            Remove
-          </button>
-        </li>
-      );
-    });
     return (
       <div>
-        <ul>{value}</ul>
+        <ul>{this.props.render(this.state, this.handleRemoveButton)}</ul>
         <input
           type="text"
           name="item"
