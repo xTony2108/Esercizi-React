@@ -27,6 +27,7 @@ import { TodoList3 } from "./Esercizio25/TodoList3";
 import { TodoList4 } from "./Esercizio26/TodoList4";
 import { TodoList5 } from "./Esercizio27/TodoList5";
 import { Context, LanguageContext } from "./Esercizio28/LanguageContext";
+import { ClickCounterFunc } from "./Esercizio30/ClickCounterFunc";
 
 class App extends React.Component {
   onLogin = (event, state) => {
@@ -107,6 +108,7 @@ class App extends React.Component {
           }}
         />
         <Context />
+        <ClickCounterFunc />
       </>
     );
   }
