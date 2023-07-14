@@ -29,6 +29,7 @@ import { TodoList5 } from "./Esercizio27/TodoList5";
 import { Context, LanguageContext } from "./Esercizio28/LanguageContext";
 import { ClickCounterFunc } from "./Esercizio30/ClickCounterFunc";
 import { FormFunc } from "./Esercizio31/FormFunc";
+import { ClickCounterFunc2 } from "./Esercizio32/ClickCounterFunc2";
 
 class App extends React.Component {
   onLogin = (event, state) => {
@@ -51,6 +52,14 @@ class App extends React.Component {
       password: password,
     };
     this.setState({ username: username, password: password });
+  };
+
+  state = {
+    count: 0,
+  };
+
+  onCounterChange = (count) => {
+    console.log(count);
   };
 
   render() {
@@ -111,6 +120,7 @@ class App extends React.Component {
         <Context />
         <ClickCounterFunc />
         <FormFunc />
+        <ClickCounterFunc2 onCounterChange={this.onCounterChange} />
       </>
     );
   }
