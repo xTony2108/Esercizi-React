@@ -38,6 +38,7 @@ import { FormFunc2 } from "./Esercizio37/FormFunc2";
 import { GithubUserHook } from "./Esercizio38/GithubUserHook";
 import { CarDetails } from "./Esercizio40/CarDetails";
 import { Context2 } from "./Esercizio41/LanguageContext2";
+import { CounterFunc3 } from "./Esercizio42/CounterFunc3";
 
 class App extends React.Component {
   onLogin = (event, state) => {
@@ -137,6 +138,7 @@ class App extends React.Component {
         <GithubUserHook />
         <CarDetails initialData={{ model: "Audi", year: 2020, color: "Red" }} />
         <Context2 />
+        <CounterFunc3 />
       </>
     );
   }
