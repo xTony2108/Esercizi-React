@@ -35,6 +35,7 @@ import { GithubUser } from "./Esercizio34/GithubUser";
 import { GithubUserList } from "./Esercizio35/GithubUserList";
 import { CounterFunc2 } from "./Esercizio36/CounterFunc2";
 import { FormFunc2 } from "./Esercizio37/FormFunc2";
+import { GithubUserHook } from "./Esercizio38/GithubUserHook";
 
 class App extends React.Component {
   onLogin = (event, state) => {
@@ -131,6 +132,7 @@ class App extends React.Component {
         <GithubUserList />
         <CounterFunc2 />
         <FormFunc2 />
+        <GithubUserHook />
       </>
     );
   }
