@@ -7,7 +7,7 @@ export const useForm = () => {
   });
 
   const handleInputChange = (event) => {
-    const { name, value, checked, type } = event.target;
+    const { name, value } = event.target;
     setForm((form) => {
       return {
         ...form,
