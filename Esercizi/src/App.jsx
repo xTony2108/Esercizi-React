@@ -34,6 +34,7 @@ import { CounterFunc } from "./Esercizio33/CounterFunc";
 import { GithubUser } from "./Esercizio34/GithubUser";
 import { GithubUserList } from "./Esercizio35/GithubUserList";
 import { CounterFunc2 } from "./Esercizio36/CounterFunc2";
+import { FormFunc2 } from "./Esercizio37/FormFunc2";
 
 class App extends React.Component {
   onLogin = (event, state) => {
@@ -129,6 +130,7 @@ class App extends React.Component {
         <GithubUser username="xTony2108" />
         <GithubUserList />
         <CounterFunc2 />
+        <FormFunc2 />
       </>
     );
   }
