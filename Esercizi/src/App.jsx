@@ -39,6 +39,7 @@ import { GithubUserHook } from "./Esercizio38/GithubUserHook";
 import { CarDetails } from "./Esercizio40/CarDetails";
 import { Context2 } from "./Esercizio41/LanguageContext2";
 import { CounterFunc3 } from "./Esercizio42/CounterFunc3";
+import { FilteredList } from "./Esercizio43/FilteredList";
 
 class App extends React.Component {
   onLogin = (event, state) => {
@@ -70,6 +71,16 @@ class App extends React.Component {
   onCounterChange = (count) => {
     console.log(count);
   };
+
+  userList = [
+    { id: 0, name: "Tony", age: 23 },
+    { id: 1, name: "Franco", age: 29 },
+    { id: 2, name: "Mario", age: 16 },
+    { id: 3, name: "Laura", age: 17 },
+    { id: 4, name: "Francesca", age: 35 },
+    { id: 5, name: "Luca", age: 13 },
+    { id: 6, name: "Antonio", age: 57 },
+  ];
 
   render() {
     return (
@@ -139,6 +150,7 @@ class App extends React.Component {
         <CarDetails initialData={{ model: "Audi", year: 2020, color: "Red" }} />
         <Context2 />
         <CounterFunc3 />
+        <FilteredList userProp={this.userList} />
       </>
     );
   }
