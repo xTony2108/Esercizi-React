@@ -1,6 +1,6 @@
 import React from "react";
 import { CounterFunc3 } from "./Esercizio42/CounterFunc3";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { Page1 } from "./pages/Page1";
 import { ShowGithubUser } from "./Esercizio45/ShowGithubUser";
 
@@ -13,6 +13,11 @@ class App extends React.Component {
           <Route path="counter" element={<CounterFunc3 />} />
           <Route path="users/:username" element={<ShowGithubUser />} />
         </Routes>
+
+        {/*Esercizio 46*/}
+        <Link to={"/"}>Homepage</Link>
+        <Link to={"counter"}>Counter</Link>
+        <Link to={"users/xTony2108"}>User</Link>
       </>
     );
     //Riga 14 è l'esercizio 45 => React Router - Add the `users/:username` path
