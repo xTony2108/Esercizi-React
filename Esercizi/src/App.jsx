@@ -8,6 +8,7 @@ import { GithubUserList } from "./Esercizio48/GithubUserList";
 import { GithubUser } from "./Esercizio48/GithubUser";
 import { ShowGithubUser2 } from "./Esercizio50/ShowGithubUser";
 import { ShowGithubUser3 } from "./Esercizio51/ShowGithubUser";
+import { ShowGithubUser4 } from "./Esercizio52/ShowGithubUser";
 
 class App extends React.Component {
   render() {
@@ -35,6 +36,7 @@ class App extends React.Component {
           </Route>
           <Route path="es50" element={<ShowGithubUser2 />} />
           <Route path="es51" element={<ShowGithubUser3 />} />
+          <Route path="es52" element={<ShowGithubUser4 />} />
         </Routes>
       </>
     );
