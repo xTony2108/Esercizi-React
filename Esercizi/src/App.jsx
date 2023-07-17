@@ -26,6 +26,9 @@ class App extends React.Component {
 
           {/*Esercizio 48*/}
           <Route path="usersEs48" element={<GithubUserList />}>
+            {/*Esercizio 49 */}
+            <Route index element={<p>Add a user and select it</p>} />
+
             <Route path=":username" element={<GithubUser />} />
           </Route>
         </Routes>
