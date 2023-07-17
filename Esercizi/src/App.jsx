@@ -3,6 +3,7 @@ import { CounterFunc3 } from "./Esercizio42/CounterFunc3";
 import { Link, Route, Routes } from "react-router-dom";
 import { Page1 } from "./pages/Page1";
 import { ShowGithubUser } from "./Esercizio45/ShowGithubUser";
+import { NotFound } from "./Esercizio47/NotFound";
 
 class App extends React.Component {
   render() {
@@ -12,6 +13,9 @@ class App extends React.Component {
           <Route path="/" element={<Page1 />} />
           <Route path="counter" element={<CounterFunc3 />} />
           <Route path="users/:username" element={<ShowGithubUser />} />
+
+          {/*Esercizio 47*/}
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         {/*Esercizio 46*/}
