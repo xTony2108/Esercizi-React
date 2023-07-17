@@ -4,11 +4,18 @@ import { Link, Route, Routes } from "react-router-dom";
 import { Page1 } from "./pages/Page1";
 import { ShowGithubUser } from "./Esercizio45/ShowGithubUser";
 import { NotFound } from "./Esercizio47/NotFound";
+import { GithubUserList } from "./Esercizio48/GithubUserList";
+import { GithubUser } from "./Esercizio48/GithubUser";
 
 class App extends React.Component {
   render() {
     return (
       <>
+        {/*Esercizio 46*/}
+        <Link to={"/"}>Homepage</Link>
+        <Link to={"counter"}>Counter</Link>
+        <Link to={"users/xTony2108"}>User</Link>
+        <Link to={"usersEs48"}>Users ES 48</Link>
         <Routes>
           <Route path="/" element={<Page1 />} />
           <Route path="counter" element={<CounterFunc3 />} />
@@ -16,12 +23,12 @@ class App extends React.Component {
 
           {/*Esercizio 47*/}
           <Route path="*" element={<NotFound />} />
-        </Routes>
 
-        {/*Esercizio 46*/}
-        <Link to={"/"}>Homepage</Link>
-        <Link to={"counter"}>Counter</Link>
-        <Link to={"users/xTony2108"}>User</Link>
+          {/*Esercizio 48*/}
+          <Route path="usersEs48" element={<GithubUserList />}>
+            <Route path=":username" element={<GithubUser />} />
+          </Route>
+        </Routes>
       </>
     );
     //Riga 14 è l'esercizio 45 => React Router - Add the `users/:username` path
